@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"name": "SPS Fullfillment",
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"aredis",
+			"cloup",
+			"fastapi",
+			"pglet",
+			"prezzo",
+			"prodotti",
+			"pyenv",
+			"quantità",
+			"REUSEADDR",
+			"sessionmaker",
+			"sqlalchemy",
+			"terr",
+			"totale",
+			"uvicorn",
+			"websockets",
+			"yacr"
+		],
+		"editor.defaultFormatter": "ms-python.autopep8",
+		"autopep8.args": ["--max-line-length=79"],
+		"black-formatter.args": ["--line-length", "79"],
+		"yapf.args": ["--style", "{based_on_style: google, indent_width: 4, column_limit: 79}"]
+	}
+}
