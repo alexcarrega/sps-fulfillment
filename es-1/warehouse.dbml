@@ -1,0 +1,58 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Article {
+  id integer [primary key]
+  description text
+  category_id integer
+  price decimal
+  quantity integer
+  supplier_id integer
+  color varchar
+}
+
+Table Category {
+  id integer [primary key]
+  name varchar
+  description text
+}
+
+Table Supplier {
+  id integer [primary key]
+  name varchar
+  address_id integer
+}
+
+Table Address {
+  id integer [primary key]
+  house varchar
+  street varchar
+  city varchar
+  postal_code varchar
+  country varchar
+}
+
+Table Order {
+  id integer [primary key]
+  article_id integer
+  date timestamp
+  type_id integer
+  quantity integer
+  price decimal
+}
+
+Table OrderType {
+  id integer [primary key]
+  name varchar [unique]
+  description text
+}
+
+Ref: Article.category_id > Category.id
+
+Ref: Article.supplier_id > Supplier.id
+
+Ref: Supplier.address_id - Address.id
+
+Ref: Order.article_id > Article.id
+
+Ref: Order.type_id > OrderType.id
